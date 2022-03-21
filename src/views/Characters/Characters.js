@@ -14,7 +14,13 @@ function Characters() {
     fetchData();
   }, [params.name]);
 
-  return <div>Characters</div>;
+  return (
+    <div>
+      {characters.map((character) => (
+        <p key={character.id}>{character.name}</p>
+      ))}
+    </div>
+  );
 }
 
 export default Characters;
