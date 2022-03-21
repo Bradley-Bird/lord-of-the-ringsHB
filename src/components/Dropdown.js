@@ -1,8 +1,8 @@
 import React from 'react';
 
-function Dropdown({ races }) {
+function Dropdown({ races, setRace }) {
   return (
-    <select>
+    <select onChange={(e) => setRace(e.target.value)}>
       {races.map((race) => (
         <option key={race}>{race}</option>
       ))}
