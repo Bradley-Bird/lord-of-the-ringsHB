@@ -1,4 +1,3 @@
-import React from 'react';
 import Main from './Main/Main';
 import Films from './Films/Films';
 import Books from './Books/Books';
