@@ -8,14 +8,18 @@ function Characters() {
   const [races, setRaces] = useState([]);
   const [race, setRace] = useState('All');
   const params = useParams();
+  async function populateDropdown() {
+    const data = await fetchCharacters('All');
+    const raceArr = [...new Set(data.map((character) => character.race))];
+    raceArr.unshift('All');
+    setRaces(raceArr);
+  }
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetchCharacters(race);
-      const raceArr = [...new Set(data.map((character) => character.race))];
-      raceArr.unshift('All');
-      setRaces(raceArr);
       setCharacters(data);
     };
+    populateDropdown();
     fetchData();
   }, [params.name, race]);
 
