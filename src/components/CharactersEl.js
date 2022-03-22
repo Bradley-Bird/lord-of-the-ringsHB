@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Ringbearer } from './RINGM___.TTF';
 
 function CharactersEl({ characters }) {
   return (
@@ -23,18 +22,14 @@ const Grid = styled.div`
   grid-gap: 3rem;
 `;
 const Card = styled.div`
-  h4 {
-    @import{ url('./RINGM___.TTF');
-    }
-    font-family: 'Ringbearer';
-    font-size: 3rem;
-    
-  }
+  font-family: 'Bilbo', cursive;
   margin-top: 10px;
   border: 2px black solid;
   padding: 10px;
+  h4 {
+    font-size: 3rem;
+  }
   p {
-    font-family: 'Bilbo', cursive;
     font-size: 2rem;
     font-weight: 600;
     letter-spacing: 0.09rem;
